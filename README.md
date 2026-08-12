@@ -1,5 +1,4 @@
 # Tu Yi — 个人介绍
-
 - GitHub: https://github.com/TuYi0521
 - Google Scholar: https://scholar.google.com/citations?user=zPTEMQ0AAAAJ&hl=en&oi=ao
 
