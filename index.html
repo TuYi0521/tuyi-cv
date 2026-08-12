@@ -1,99 +1,334 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Tu Yi — 简历</title>
-  <style>
-    body{font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial;line-height:1.6;color:#111;margin:0;padding:0;background:#f7f7f7}
-    .container{max-width:900px;margin:36px auto;background:#fff;padding:28px;border-radius:8px;box-shadow:0 6px 18px rgba(15,15,15,0.08)}
-    h1{margin:0 0 8px;font-size:28px}
-    h2{border-bottom:1px solid #eee;padding-bottom:6px;margin-top:24px}
-    .meta{color:#555;margin-bottom:12px}
-    .section{margin-top:16px}
-    ol{padding-left:20px}
-    a{color:#0366d6}
-    .small{color:#666;font-size:13px}
-    pre{white-space:pre-wrap;background:#f3f4f6;padding:12px;border-radius:6px}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tu Yi — Researcher in Cryptanalysis & AI Safety</title>
+<meta name="description" content="Tu Yi — PhD, Nanyang Technological University. Research on ML-aided and SAT-aided cryptanalysis of symmetric-key primitives, and AI safety.">
+<style>
+:root{
+  --bg:#fff; --bg-soft:#f6f7f9; --card:#fff;
+  --fg:#1a1a1a; --fg-soft:#555; --fg-mute:#888;
+  --accent:#2b6cb0; --accent-2:#6b46c1; --grad:linear-gradient(135deg,#2b6cb0,#6b46c1);
+  --border:#e5e7eb; --shadow:0 1px 3px rgba(0,0,0,.06); --shadow-lg:0 10px 30px rgba(0,0,0,.08);
+  --radius:12px;
+}
+[data-theme="dark"]{
+  --bg:#0d1117; --bg-soft:#161b22; --card:#161b22;
+  --fg:#e6edf3; --fg-soft:#9da9b8; --fg-mute:#6b7886;
+  --accent:#58a6ff; --accent-2:#bc8cff; --grad:linear-gradient(135deg,#58a6ff,#bc8cff);
+  --border:#30363d; --shadow:0 1px 3px rgba(0,0,0,.3); --shadow-lg:0 10px 30px rgba(0,0,0,.4);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;color:var(--fg);background:var(--bg);margin:0;-webkit-font-smoothing:antialiased;transition:background .3s,color .3s}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+nav{position:sticky;top:0;z-index:50;backdrop-filter:saturate(180%) blur(12px);background:color-mix(in srgb,var(--bg) 80%,transparent);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:980px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+.nav-brand{font-weight:700;font-size:16px}
+.nav-brand .dot{color:var(--accent)}
+.nav-links{display:flex;gap:22px;align-items:center}
+.nav-links a{color:var(--fg-soft);font-size:14px;font-weight:500}
+.nav-links a:hover{color:var(--fg);text-decoration:none}
+.theme-btn{background:none;border:1px solid var(--border);border-radius:999px;width:34px;height:34px;cursor:pointer;color:var(--fg-soft);font-size:15px;display:inline-flex;align-items:center;justify-content:center}
+.theme-btn:hover{color:var(--fg);border-color:var(--accent)}
+header.hero{padding:80px 24px 60px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 50% at 50% 0%,color-mix(in srgb,var(--accent) 12%,transparent),transparent 70%);z-index:-1}
+.avatar{width:120px;height:120px;border-radius:50%;margin:0 auto 22px;background:var(--grad);display:flex;align-items:center;justify-content:center;color:#fff;font-size:44px;font-weight:700;box-shadow:var(--shadow-lg)}
+h1.name{font-size:38px;margin:0 0 10px;letter-spacing:-.02em;font-weight:800}
+.tagline{font-size:18px;color:var(--fg-soft);margin:0 auto 18px;max-width:640px}
+.tagline .role{color:var(--fg);font-weight:600}
+.affil{font-size:15px;color:var(--fg-mute)}
+.hero-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;font-size:14px;font-weight:600;border:1px solid var(--border);background:var(--card);color:var(--fg);transition:all .2s}
+.btn:hover{transform:translateY(-1px);box-shadow:var(--shadow-lg);text-decoration:none}
+.btn.primary{background:var(--grad);color:#fff;border-color:transparent}
+.btn.primary:hover{color:#fff}
+main{max-width:980px;margin:0 auto;padding:0 24px 80px}
+section{padding:48px 0;border-top:1px solid var(--border)}
+section:first-of-type{border-top:none}
+h2{font-size:22px;margin:0 0 22px;letter-spacing:-.01em;display:flex;align-items:center;gap:10px}
+h2 .num{color:var(--accent);font-size:14px;font-weight:700}
+h2::after{content:"";flex:1;height:1px;background:var(--border)}
+.grid{display:grid;gap:16px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px 22px;box-shadow:var(--shadow);transition:all .2s}
+.card:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px)}
+.about p{font-size:16px;color:var(--fg-soft);margin:0 0 14px}
+.about p:last-child{margin-bottom:0}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.chip{padding:6px 13px;border-radius:999px;background:var(--bg-soft);border:1px solid var(--border);font-size:13px;color:var(--fg-soft);font-weight:500}
+.timeline{position:relative;padding-left:24px}
+.timeline::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--border)}
+.tl-item{position:relative;padding:0 0 26px 22px}
+.tl-item::before{content:"";position:absolute;left:-21px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--grad);box-shadow:0 0 0 4px var(--bg)}
+.tl-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.tl-title{font-weight:700;font-size:16px}
+.tl-org{color:var(--accent);font-size:14px;font-weight:600}
+.tl-date{color:var(--fg-mute);font-size:13px;white-space:nowrap}
+.tl-desc{color:var(--fg-soft);font-size:14px;margin-top:4px}
+.pub-year{font-size:18px;font-weight:800;color:var(--accent);margin:28px 0 12px}
+.pub-year:first-child{margin-top:0}
+.pub{padding:16px 20px;margin-bottom:10px}
+.pub-title{font-weight:700;font-size:15.5px;line-height:1.45;margin-bottom:6px}
+.pub-authors{font-size:13.5px;color:var(--fg-soft);margin-bottom:4px}
+.pub-authors .me{color:var(--accent);font-weight:700}
+.pub-venue{font-size:13px;color:var(--fg-mute)}
+.pub-venue .tag{display:inline-block;padding:1px 8px;border-radius:6px;background:var(--bg-soft);border:1px solid var(--border);color:var(--fg-soft);font-weight:600;margin-right:6px}
+footer{text-align:center;padding:40px 24px 50px;color:var(--fg-mute);font-size:13px;border-top:1px solid var(--border)}
+@media (max-width:640px){
+  .nav-links a:not(.theme-btn-wrap){display:none}
+  h1.name{font-size:30px}
+  .tagline{font-size:16px}
+  .avatar{width:96px;height:96px;font-size:36px}
+  header.hero{padding:60px 20px 44px}
+  main{padding:0 18px 60px}
+  section{padding:36px 0}
+}
+</style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Tu Yi</h1>
-      <div class="meta">GitHub: <a href="https://github.com/TuYi0521">github.com/TuYi0521</a> · Google Scholar: <a href="https://scholar.google.com/citations?user=zPTEMQ0AAAAJ&hl=en&oi=ao">profile</a></div>
-    </header>
-
-    <section class="section">
-      <h2>个人信息</h2>
-      <p class="small">（如需，把 PDF 中的电话、邮箱和主页自动填入；目前内容基于你提供的 README）</p>
-    </section>
-
-    <section class="section">
-      <h2>教育经历</h2>
-      <ul>
-        <li>Ph.D., Nanyang Technological University (NTU), 2022 — 研究方向：Machine learning-aided and SAT-aided cryptanalysis of symmetric-key primitives</li>
-        <li>M.S., The George Washington University (GWU)</li>
-        <li>B.S., Nankai University</li>
-      </ul>
-    </section>
-
-    <section class="section">
-      <h2>工作 / 项目经历（节选）</h2>
-      <ul>
-        <li>Huawei — 研究/工程角色（2023–至今）</li>
-        <li>Nanyang Technological University — 研究助理 / 教学助理</li>
-        <li>其他项目与实习经历（详见 PDF）</li>
-      </ul>
-    </section>
-
-    <section class="section">
-      <h2>Publications</h2>
-      <p class="small">（按上传的 citations.csv 导出列出；如需按年份排序或加入 DOI/链接可进一步处理）</p>
-      <ol>
-        <li>Guo, Jian; Liu, Guozhen; Song, Ling; Tu, Yi. Exploring SAT for Cryptanalysis: (Quantum) Collision Attacks against 6-Round SHA-3 (Full Version). Cryptology ePrint Archive, 2022.</li>
-        <li>Guo, Jian; Liu, Guozhen; Song, Ling; Tu, Yi. Exploring SAT for cryptanalysis: (quantum) collision attacks against 6-round SHA-3. International Conference on the Theory and Application of Cryptology and Information Security, 2022, pp. 645–674. Springer.</li>
-        <li>Lyu, Lijun; Tu, Yi; Zhang, Yingjie. Deep learning assisted key recovery attack for round-reduced simeck32/64. International Conference on Information Security, 2022, pp. 443–463. Springer.</li>
-        <li>Bao, Zhenzhen; Guo, Jian; Liu, Meicheng; Ma, Li; Tu, Yi. Conditional Differential-Neural Cryptanalysis. IACR Cryptology ePrint Archive, 2021, 719.</li>
-        <li>Wang, Chenyu; Wang, Ding; Tu, Yi; Xu, Guoai; Wang, Huaxiong. Understanding node capture attacks in user authentication schemes for wireless sensor networks. IEEE Transactions on Dependable and Secure Computing, 2020, Vol. 19(1), pp. 507–523. IEEE.</li>
-        <li>Bao, Zhenzhen; Guo, Jian; Shi, Danping; Tu, Yi. MITM Meets Guess-and-Determine: Further Improved Preimage Attacks against AES-like Hashing. IACR Cryptology ePrint Archive, 2021, 575.</li>
-        <li>Liu, Guozhen; Qiu, Weidong; Tu, Yi. New techniques for searching differential trails in Keccak. IACR Transactions on Symmetric Cryptology, 2019, pp. 407–437.</li>
-        <li>Bao, Zhenzhen; Guo, Jian; Liu, Meicheng; Ma, Li; Tu, Yi. Enhancing differential-neural cryptanalysis. International Conference on the Theory and Application of Cryptology and Information Security, 2022, pp. 318–347. Springer.</li>
-        <li>Tu, Yi. Machine learning-aided and SAT-aided cryptanalysis of symmetric-key primitives. (Thesis), Nanyang Technological University, 2022.</li>
-        <li>Bao, Zhenzhen; Guo, Jian; Shi, Danping; Tu, Yi. Superposition meet-in-the-middle attacks: updates on fundamental security of AES-like hashing. Annual International Cryptology Conference, 2022, pp. 64–93. Springer.</li>
-        <li>Song, Ling; Tu, Yi; Shi, Danping; Hu, Lei. Security analysis of Subterranean 2.0. Designs, Codes and Cryptography, 2021, Vol. 89(8), pp. 1875–1905. Springer.</li>
-        <li>Lyu, Lijun; Tu, Yi; Zhang, Yingjie. Improving the deep-learning-based differential distinguisher and applications to simeck. 2022 IEEE 25th CSCWD, 2022, pp. 465–470. IEEE.</li>
-        <li>Wu, Peizhi; Tu, Yi; Yuan, Xiaojie; Jatowt, Adam; Yang, Zhenglu. Neural framework for joint evolution modeling of user feedback and social links in dynamic social networks. IJCAI, 2018, pp. 1632–1638.</li>
-        <li>Wu, Peizhi; Tu, Yi; Yang, Zhenglu; Jatowt, Adam; Odagaki, Masato. Deep modeling of the evolution of user preferences and item attributes in dynamic social networks. Companion Proceedings of The Web Conference 2018, 2018, pp. 115–116.</li>
-        <li>Liu, Yixiu; Zheng, Yuxiang; Xia, Shijie; Li, Jiajun; Tu, Yi; Song, Chaoling; Liu, Pengfei. Safety-j: Evaluating safety with critique. Findings of ACL: EMNLP 2024, 2024, pp. 1170–1192.</li>
-        <li>Xu, Chenkai; Jin, Yijie; Li, Jiajun; Tu, Yi; Long, Guoping; Tu, Dandan; Song, Mingcong; Si, Hongjie; Hou, Tianqi; Yan, Junchi. Lopa: Scaling dllm inference via lookahead parallel decoding. arXiv preprint arXiv:2512.16229, 2025.</li>
-        <li>Liu, Dengcan; Li, Jiahao; Fu, Zheren; Tu, Yi; Li, Jiajun; Mao, Zhendong; Zhang, Yongdong. SparseRM: A Lightweight Preference Modeling with Sparse Autoencoder. AAAI, 2026, Vol. 40(38), pp. 32051–32059.</li>
-        <li>Zhang, Chenyu; Ma, Yiwen; Wang, Lanjun; Li, Wenhui; Tu, Yi; Liu, An-An. Metaphor-based jailbreaking attacks on text-to-image models. arXiv e-prints, arXiv:2512.10766, 2025.</li>
-        <li>Hu, Mingwang; Tu, Yi; Tu, Dandan; Wang, Lanjun. Targeted ensemble defense against unauthorized text-to-image identity customization. Information Fusion, 2025, Article 103696. Elsevier.</li>
-        <li>Xia, Hou; Fu, Zheren; Ling, Fangcan; Li, Jiajun; Tu, Yi; Mao, Zhendong; Zhang, Yongdong. Video-LevelGauge: Investigating Contextual Positional Bias in Video Language Models. arXiv preprint arXiv:2508.19650, 2025.</li>
-        <li>Xia, Hou; Fu, Zheren; Ling, Fangcan; Li, Jiajun; Tu, Yi; Mao, Zhendong; Zhang, Yongdong. Video-LevelGauge: Investigating Contextual Positional Bias in Video Language Models. ICLR, 2026, pp. 45877–45905.</li>
-        <li>Yao, Zhiyuan; Fu, Zheren; Zheng, Zhixiao; Li, Jiajun; Tu, Yi; Mao, Zhendong. ADAPT: Attention Dynamics Alignment with Preference Tuning for Faithful MLLMs. arXiv preprint arXiv:2606.31054, 2026.</li>
-        <li>Zhang, Chenyu; Wang, Lanjun; Ma, Yiwen; Li, Wenhui; Tu, Yi; Liu, An-An. Metaphor-based Jailbreak Attacks on Text-to-Image Models. arXiv preprint arXiv:2512.10766, 2025.</li>
-        <li>TU, YI. Cryptanalysis of Symmetric-key Primitives. 2022.</li>
-      </ol>
-    </section>
-
-    <section class="section">
-      <h2>说明 / 下一步</h2>
-      <ul>
-        <li>当前为本地预览，文件位于 <a href="/Users/tuyi/Dev/projects/CV/README.md">README.md</a> 和 <a href="/Users/tuyi/Dev/projects/CV/index.html">index.html</a>.</li>
-        <li>若要在 GitHub 上公开为个人主页：初始化 git、创建远程仓库（例如 <code>TuYi0521/resume</code>）并将文件推送到主分支或启用 GitHub Pages（选择 repository root 或 gh-pages 分支）。</li>
-        <li>是否需要我为你：
-          <ol>
-            <li>初始化本地 git 并提交（我可以执行）</li>
-            <li>在你的 GitHub 帐号下创建仓库并推送（需要授权或你手动创建仓库并给我仓库名）</li>
-            <li>或只生成更漂亮的 index.html 模板（Bootstrap / 简洁样式）</li>
-          </ol>
-        </li>
-      </ul>
-    </section>
-
-    <footer class="small">生成时间: 2026-08-12T22:13:39+08:00</footer>
+<nav>
+  <div class="nav-inner">
+    <div class="nav-brand">Tu Yi<span class="dot">.</span></div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#publications">Publications</a>
+      <span class="theme-btn-wrap"><button class="theme-btn" id="themeToggle">🌙</button></span>
+    </div>
   </div>
+</nav>
+
+<header class="hero">
+  <div class="avatar">TY</div>
+  <h1 class="name">Tu Yi</h1>
+  <p class="tagline"><span class="role">Researcher in Cryptanalysis &amp; AI Safety</span><br>
+    ML-aided &amp; SAT-aided cryptanalysis of symmetric-key primitives; multimodal LLM safety.</p>
+  <p class="affil">PhD, Nanyang Technological University &middot; Research at Huawei</p>
+  <div class="hero-links">
+    <a class="btn primary" href="https://scholar.google.com/citations?user=zPTEMQ0AAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Google Scholar</a>
+    <a class="btn" href="https://github.com/TuYi0521" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn" href="#publications">Publications</a>
+  </div>
+</header>
+
+<main>
+  <section id="about" class="about">
+    <h2><span class="num">01</span>About</h2>
+    <p>I am a researcher working at the intersection of <strong>cryptography</strong> and <strong>machine learning</strong>. My PhD work at Nanyang Technological University focused on machine-learning-aided and SAT-aided cryptanalysis of symmetric-key primitives — developing new attacks and analysis tools for hash functions and block ciphers such as SHA-3, Keccak, AES-like hashing, and Simeck.</p>
+    <p>More recently my interests have expanded to <strong>AI safety</strong>, including safety evaluation of large language models, jailbreak attacks and defenses on text-to-image models, and bias analysis in video-language models.</p>
+    <div class="chips">
+      <span class="chip">Symmetric-key Cryptanalysis</span>
+      <span class="chip">SAT / SMT Solving</span>
+      <span class="chip">Neural Distinguishers</span>
+      <span class="chip">Hash Functions</span>
+      <span class="chip">AI Safety</span>
+      <span class="chip">LLM Evaluation</span>
+      <span class="chip">Multimodal Models</span>
+    </div>
+  </section>
+
+  <section id="research">
+    <h2><span class="num">02</span>Research Interests</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="tl-title">Cryptanalysis of Symmetric-Key Primitives</div>
+        <div class="tl-desc">Differential / linear / algebraic attacks; SAT-based and quantum collision attacks on SHA-3 / Keccak; preimage and MITM attacks on AES-like hashing; conditional differential cryptanalysis.</div>
+      </div>
+      <div class="card">
+        <div class="tl-title">Machine Learning for Cryptanalysis</div>
+        <div class="tl-desc">Deep-learning-based differential distinguishers; neural cryptanalysis of lightweight block ciphers (Simeck); key-recovery attacks aided by neural networks.</div>
+      </div>
+      <div class="card">
+        <div class="tl-title">AI Safety &amp; Alignment</div>
+        <div class="tl-desc">Safety evaluation with critique; jailbreak attacks and targeted defenses on text-to-image identity customization; positional bias in video-language models; preference tuning for faithful MLLMs.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2><span class="num">03</span>Education</h2>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-head"><span class="tl-title">Ph.D. in Computer Science</span><span class="tl-date">2022</span></div>
+        <div class="tl-org">Nanyang Technological University (NTU)</div>
+        <div class="tl-desc">Thesis: Machine learning-aided and SAT-aided cryptanalysis of symmetric-key primitives.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-head"><span class="tl-title">M.S.</span></div>
+        <div class="tl-org">The George Washington University (GWU)</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-head"><span class="tl-title">B.S.</span></div>
+        <div class="tl-org">Nankai University</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2><span class="num">04</span>Experience</h2>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-head"><span class="tl-title">Researcher / Engineer</span><span class="tl-date">2023 — present</span></div>
+        <div class="tl-org">Huawei</div>
+        <div class="tl-desc">Research and engineering in cryptography and AI safety.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-head"><span class="tl-title">Research Assistant / Teaching Assistant</span></div>
+        <div class="tl-org">Nanyang Technological University</div>
+        <div class="tl-desc">Projects on cryptanalysis and machine-learning-aided analysis of symmetric-key primitives.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="publications">
+    <h2><span class="num">05</span>Publications</h2>
+
+    <div class="pub-year">2026</div>
+    <div class="card pub">
+      <div class="pub-title">SparseRM: A Lightweight Preference Modeling with Sparse Autoencoder</div>
+      <div class="pub-authors">Liu, Dengcan; Li, Jiahao; Fu, Zheren; <span class="me">Tu, Yi</span>; Li, Jiajun; Mao, Zhendong; Zhang, Yongdong</div>
+      <div class="pub-venue"><span class="tag">AAAI 2026</span>Proceedings of the AAAI Conference on Artificial Intelligence, Vol. 40(38), pp. 32051–32059</div>
+    </div>
+    <div class="card pub">
+      <div class="pub-title">Video-LevelGauge: Investigating Contextual Positional Bias in Video Language Models</div>
+      <div class="pub-authors">Xia, Hou; Fu, Zheren; Ling, Fangcan; Li, Jiajun; <span class="me">Tu, Yi</span>; Mao, Zhendong; Zhang, Yongdong</div>
+      <div class="pub-venue"><span class="tag">ICLR 2026</span>International Conference on Learning Representations, pp. 45877–45905</div>
+    </div>
+    <div class="card pub">
+      <div class="pub-title">ADAPT: Attention Dynamics Alignment with Preference Tuning for Faithful MLLMs</div>
+      <div class="pub-authors">Yao, Zhiyuan; Fu, Zheren; Zheng, Zhixiao; Li, Jiajun; <span class="me">Tu, Yi</span>; Mao, Zhendong</div>
+      <div class="pub-venue"><span class="tag">arXiv 2026</span>arXiv:2606.31054</div>
+    </div>
+
+    <div class="pub-year">2025</div>
+    <div class="card pub">
+      <div class="pub-title">Lopa: Scaling DLLM Inference via Lookahead Parallel Decoding</div>
+      <div class="pub-authors">Xu, Chenkai; Jin, Yijie; Li, Jiajun; <span class="me">Tu, Yi</span>; Long, Guoping; Tu, Dandan; Song, Mingcong; Si, Hongjie; Hou, Tianqi; Yan, Junchi</div>
+      <div class="pub-venue"><span class="tag">arXiv 2025</span>arXiv:2512.16229</div>
+    </div>
+    <div class="card pub">
+      <div class="pub-title">Targeted Ensemble Defense Against Unauthorized Text-to-Image Identity Customization</div>
+      <div class="pub-authors">Hu, Mingwang; <span class="me">Tu, Yi</span>; Tu, Dandan; Wang, Lanjun</div>
+      <div class="pub-venue"><span class="tag">Information Fusion 2025</span>Article 103696, Elsevier</div>
+    </div>
+    <div class="card pub">
+      <div class="pub-title">Metaphor-based Jailbreaking Attacks on Text-to-Image Models</div>
+      <div class="pub-authors">Zhang, Chenyu; Ma, Yiwen; Wang, Lanjun; Li, Wenhui; <span class="me">Tu, Yi</span>; Liu, An-An</div>
+      <div class="pub-venue"><span class="tag">arXiv 2025</span>arXiv:2512.10766</div>
+    </div>
+    <div class="card pub">
+      <div class="pub-title">Video-LevelGauge: Investigating Contextual Positional Bias in Video Language Models</div>
+      <div class="pub-authors">Xia, Hou; Fu, Zheren; Ling, Fangcan; Li, Jiajun; <span class="me">Tu, Yi</span>; Mao, Zhendong; Zhang, Yongdong</div>
+      <div class="pub-venue"><span class="tag">arXiv 2025</span>arXiv:2508.19650</div>
+    </div>
+
+    <div class="pub-year">2024</div>
+    <div class="card pub">
+      <div class="pub-title">Safety-j: Evaluating Safety with Critique</div>
+      <div class="pub-authors">Liu, Yixiu; Zheng, Yuxiang; Xia, Shijie; Li, Jiajun; <span class="me">Tu, Yi</span>; Song, Chaoling; Liu, Pengfei</div>
+      <div class="pub-venue"><span class="tag">EMNLP 2024 (Findings)</span>pp. 1170–1192</div>
+    </div>
+
+    <div class="pub-year">2022</div>
+    <div class="card pub">
+      <div class="pub-title">Exploring SAT for Cryptanalysis: (Quantum) Collision Attacks against 6-Round SHA-3</div>
+      <div class="pub-authors">Guo, Jian; Liu, Guozhen; Song, Ling; <span class="me">Tu, Yi</span></div>
+      <div class="pub-venue"><span class="tag">Asiacrypt 2022</span>pp. 645–674, Springer &middot; <a href="#" target="_blank">ePrint Full Version</a></div>
+    </div>
+    <div class="card pub">
+      <div class="pub-title">Superposition Meet-in-the-Middle Attacks: Updates on Fundamental Security of AES-like Hashing</div>
+      <div class="pub-authors">Bao, Zhenzhen; Guo, Jian; Shi, Danping; <span class="me">Tu, Yi</span></div>
+      <div class="pub-venue"><span class="tag">CRYPTO 2022</span>pp. 64–93, Springer</div>
+    </div>
+    <div class="card pub">
+      <div class="pub-title">Enhancing Differential-Neural Cryptanalysis</div>
+      <div class="pub-authors">Bao, Zhenzhen; Guo, Jian; Liu, Meicheng; Ma, Li; <span class="me">Tu, Yi</span></div>
+      <div class="pub-venue"><span class="tag">Asiacrypt 2022</span>pp. 318–347, Springer</div>
+    </div>
+    <div class="card pub">
+      <div class="pub-title">Deep Learning Assisted Key Recovery Attack for Round-Reduced Simeck32/64</div>
+      <div class="pub-authors">Lyu, Lijun; <span class="me">Tu, Yi</span>; Zhang, Yingjie</div>
+      <div class="pub-venue"><span class="tag">ISC 2022</span>pp. 443–463, Springer</div>
+    </div>
+    <div class="card pub">
+      <div class="pub-title">Improving the Deep-Learning-Based Differential Distinguisher and Applications to Simeck</div>
+      <div class="pub-authors">Lyu, Lijun; <span class="me">Tu, Yi</span>; Zhang, Yingjie</div>
+      <div class="pub-venue"><span class="tag">CSCWD 2022</span>pp. 465–470, IEEE</div>
+    </div>
+    <div class="card pub">
+      <div class="pub-title">Machine Learning-Aided and SAT-Aided Cryptanalysis of Symmetric-Key Primitives (PhD Thesis)</div>
+      <div class="pub-authors"><span class="me">Tu, Yi</span></div>
+      <div class="pub-venue"><span class="tag">Thesis 2022</span>Nanyang Technological University</div>
+    </div>
+
+    <div class="pub-year">2021</div>
+    <div class="card pub">
+      <div class="pub-title">Conditional Differential-Neural Cryptanalysis</div>
+      <div class="pub-authors">Bao, Zhenzhen; Guo, Jian; Liu, Meicheng; Ma, Li; <span class="me">Tu, Yi</span></div>
+      <div class="pub-venue"><span class="tag">ePrint 2021</span>IACR Cryptology ePrint Archive, 719</div>
+    </div>
+    <div class="card pub">
+      <div class="pub-title">MITM Meets Guess-and-Determine: Further Improved Preimage Attacks against AES-like Hashing</div>
+      <div class="pub-authors">Bao, Zhenzhen; Guo, Jian; Shi, Danping; <span class="me">Tu, Yi</span></div>
+      <div class="pub-venue"><span class="tag">ePrint 2021</span>IACR Cryptology ePrint Archive, 575</div>
+    </div>
+    <div class="card pub">
+      <div class="pub-title">Security Analysis of Subterranean 2.0</div>
+      <div class="pub-authors">Song, Ling; <span class="me">Tu, Yi</span>; Shi, Danping; Hu, Lei</div>
+      <div class="pub-venue"><span class="tag">DCC 2021</span>Designs, Codes and Cryptography, Vol. 89(8), pp. 1875–1905, Springer</div>
+    </div>
+
+    <div class="pub-year">2020</div>
+    <div class="card pub">
+      <div class="pub-title">Understanding Node Capture Attacks in User Authentication Schemes for Wireless Sensor Networks</div>
+      <div class="pub-authors">Wang, Chenyu; Wang, Ding; <span class="me">Tu, Yi</span>; Xu, Guoai; Wang, Huaxiong</div>
+      <div class="pub-venue"><span class="tag">IEEE TDSC 2020</span>Vol. 19(1), pp. 507–523, IEEE</div>
+    </div>
+
+    <div class="pub-year">2019</div>
+    <div class="card pub">
+      <div class="pub-title">New Techniques for Searching Differential Trails in Keccak</div>
+      <div class="pub-authors">Liu, Guozhen; Qiu, Weidong; <span class="me">Tu, Yi</span></div>
+      <div class="pub-venue"><span class="tag">ToSC 2019</span>IACR Transactions on Symmetric Cryptology, pp. 407–437</div>
+    </div>
+
+    <div class="pub-year">2018</div>
+    <div class="card pub">
+      <div class="pub-title">Neural Framework for Joint Evolution Modeling of User Feedback and Social Links in Dynamic Social Networks</div>
+      <div class="pub-authors">Wu, Peizhi; <span class="me">Tu, Yi</span>; Yuan, Xiaojie; Jatowt, Adam; Yang, Zhenglu</div>
+      <div class="pub-venue"><span class="tag">IJCAI 2018</span>pp. 1632–1638</div>
+    </div>
+    <div class="card pub">
+      <div class="pub-title">Deep Modeling of the Evolution of User Preferences and Item Attributes in Dynamic Social Networks</div>
+      <div class="pub-authors">Wu, Peizhi; <span class="me">Tu, Yi</span>; Yang, Zhenglu; Jatowt, Adam; Odagaki, Masato</div>
+      <div class="pub-venue"><span class="tag">Web Conf 2018</span>Companion Proceedings, pp. 115–116</div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Tu Yi &middot; <a href="https://github.com/TuYi0521" target="_blank" rel="noopener">GitHub</a> &middot; <a href="https://scholar.google.com/citations?user=zPTEMQ0AAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Google Scholar</a></p>
+  <p>© 2026 Tu Yi. Powered by GitHub Pages.</p>
+</footer>
+
+<script>
+(function(){
+  var t = document.getElementById('themeToggle');
+  var saved = localStorage.getItem('theme');
+  if(saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)){
+    document.documentElement.setAttribute('data-theme','dark');
+    t.textContent = '☀️';
+  }
+  t.addEventListener('click', function(){
+    var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    if(isDark){ document.documentElement.removeAttribute('data-theme'); t.textContent='🌙'; localStorage.setItem('theme','light'); }
+    else { document.documentElement.setAttribute('data-theme','dark'); t.textContent='☀️'; localStorage.setItem('theme','dark'); }
+  });
+})();
+</script>
 </body>
 </html>
