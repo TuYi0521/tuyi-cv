@@ -1,6 +1,4 @@
-# Tu Yi — 简历
-
-> 用于个人主页的 Markdown 简历（基于提供的 PDF 与 Google Scholar 导出）。
+# Tu Yi — 个人介绍
 
 - GitHub: https://github.com/TuYi0521
 - Google Scholar: https://scholar.google.com/citations?user=zPTEMQ0AAAAJ&hl=en&oi=ao
