@@ -11,8 +11,6 @@
 
 Tu Yi
 
-(请在此处补充电话、邮箱、个人主页或照片链接——如果需要我可以替你把这些从 PDF 中提取并填入)
-
 ---
 
 ## 教育经历
@@ -27,13 +25,10 @@ Tu Yi
 
 - Huawei — 研究/工程角色（2023–至今）
 - Nanyang Technological University — 研究助理 / 教学助理（在读/任职期间参与加密与机器学习相关项目）
-- 其他项目与实习经历（详见 PDF）
 
 ---
 
-## 论文 Publications (synchronized from uploaded citations.csv)
-
-下面按导出顺序列出（若需按年份或作者排序、或附 DOI/链接，可进一步处理）:
+## 论文 Publications:
 
 1. Guo, Jian; Liu, Guozhen; Song, Ling; Tu, Yi. Exploring SAT for Cryptanalysis: (Quantum) Collision Attacks against 6-Round SHA-3 (Full Version). Cryptology ePrint Archive, 2022.
 2. Guo, Jian; Liu, Guozhen; Song, Ling; Tu, Yi. Exploring SAT for cryptanalysis: (quantum) collision attacks against 6-round SHA-3. International Conference on the Theory and Application of Cryptology and Information Security, 2022, pp. 645–674. Springer.
@@ -59,18 +54,3 @@ Tu Yi
 22. Yao, Zhiyuan; Fu, Zheren; Zheng, Zhixiao; Li, Jiajun; Tu, Yi; Mao, Zhendong. ADAPT: Attention Dynamics Alignment with Preference Tuning for Faithful MLLMs. arXiv preprint arXiv:2606.31054, 2026.
 23. Zhang, Chenyu; Wang, Lanjun; Ma, Yiwen; Li, Wenhui; Tu, Yi; Liu, An-An. Metaphor-based Jailbreak Attacks on Text-to-Image Models. arXiv preprint arXiv:2512.10766, 2025.
 24. TU, YI. Cryptanalysis of Symmetric-key Primitives. 2022.
-
----
-
-## 其它信息 / 说明
-
-- 本 README 的 Publications 节使用你上传的 citations.csv（Google Scholar 导出）生成。如需我把条目按年份倒序、添加 DOI/链接或用 BibTeX 导出格式化，请告知。
-- 若想把这个 README 推到 GitHub 并启用为个人主页（README 即主页）或生成对应的 GitHub Pages，我可以帮助你初始化本地 Git 仓库、创建远程仓库并推送（需要 GitHub 权限/授权）。
-
----
-
-如果需要，下一步可以：
-1. 从 PDF 自动提取并填入完整的个人信息（电话、邮箱、地址）并更新 README。
-2. 将 README 转换为 GitHub Pages（生成 index.html 或用 Jekyll），并推送到 github.com/TuYi0521/<repo-name>。
-
-请告诉我下一步要执行的操作。
